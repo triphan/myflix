@@ -1,8 +1,5 @@
-- if @results.any?
+.videos.row
   - @results.each do |video|
-    .videos.row
-      .video.col-sm-2
-        = link_to video do
-          %img(src="#{video.small_cover_url}")
-- else
-  %p There are no results!
+    .video.col-sm-2
+      = link_to video do
+        %img(src="#{video.small_cover_url}")

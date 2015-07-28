@@ -7,8 +7,8 @@ describe Video do
 
   describe 'search_by_title' do
     it 'should return an empty array if there are no matches' do
-      results = Video.search_by_title('title')
-      expect(results).to eq([])
+      video = Video.create(title: "ho", description: "description")
+      expect(Video.search_by_title("title")).to eq([])
     end
     it 'return an array of one video if there is an exact match' do
       vid = Video.create(title: "vid", description: 'desc')
